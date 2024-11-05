@@ -1,0 +1,98 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 100;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feedback-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-items li {
+  font-size: 18px;
+  padding: 5px 0;
+  color: #555;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.options button {
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.options button:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+.options button:active {
+  background-color: #bbb;
+}
+
+.options button:nth-child(1) {
+  background-color: #4caf50; /* Good feedback - yeşil */
+  color: white;
+}
+
+.options button:nth-child(2) {
+  background-color: #ffeb3b; /* Neutral feedback - sarı */
+  color: black;
+}
+
+.options button:nth-child(3) {
+  background-color: #f44336; /* Bad feedback - kırmızı */
+  color: white;
+}
+
+.options button:nth-child(4) {
+  background-color: #607d8b; /* Reset button - gri */
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 40px;
+  }
+  .options button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .feedback-items li {
+    font-size: 16px;
+  }
+}
